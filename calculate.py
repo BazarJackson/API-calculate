@@ -19,13 +19,13 @@ def calculate():
     except ValueError:
         return jsonify({"error": "Параметры должны быть числами."}), 400
 
-    if operation == "add":
+    if operation == "+":
         result = num1 + num2
-    elif operation == "subtract":
+    elif operation == "-":
         result = num1 - num2
-    elif operation == "multiply":
+    elif operation == "*":
         result = num1 * num2
-    elif operation == "divide":
+    elif operation == "/":
         if num2 == 0:
             return jsonify({"error": "Деление на ноль."}), 400
         result = num1 / num2
