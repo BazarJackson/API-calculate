@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# Простой калькулятор, поддерживающий сложение, вычитание, умножение и деление
 @app.route('/calculate', methods=['POST'])
 def calculate():
     data = request.get_json()
