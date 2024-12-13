@@ -26,6 +26,7 @@
 
 Создали ключи и сертификаты:
 ![image](https://github.com/user-attachments/assets/e4f45da8-cf02-47b2-9bb1-884ff6fb0cf9)
+
 Также копируем ca.crt в /srv/gitlab-runner/ca.crt
 
 После данного шага нужно зарегать раннера:
