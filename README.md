@@ -47,8 +47,11 @@ gitlab-runner register --url "https://gitlab.example.com" --tls-ca-file=/etc/git
 ![image](https://github.com/user-attachments/assets/78d7b050-8402-4802-8ba4-b03a794ea850)
 
 Разбор отчетов:
+
 bandit:
 ![image](https://github.com/user-attachments/assets/328d4c2c-bbc7-4942-87db-504e4250efc3)
+
+![image](https://github.com/user-attachments/assets/e4178251-5fed-4dad-8c23-c03025f6d001)
 
 trivy:
 ![image](https://github.com/user-attachments/assets/4f0d6536-005b-4f8f-b15b-4ced3463ced6)
