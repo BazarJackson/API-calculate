@@ -24,6 +24,27 @@
 ![image](https://github.com/user-attachments/assets/340fd35d-b788-4a13-bd24-49b5b8e86a9e)
 ![image](https://github.com/user-attachments/assets/9c9b888e-2063-441e-819d-82c738886da6)
 
+Создали ключи и сертификаты:
+![image](https://github.com/user-attachments/assets/e4f45da8-cf02-47b2-9bb1-884ff6fb0cf9)
+Также копируем ca.crt в /srv/gitlab-runner/ca.crt
+
+После данного шага нужно зарегать раннера:
+docker exec -it gitlab-runner /bin/bash
+gitlab-runner register --url "https://gitlab.example.com" --tls-ca-file=/etc/gitlab-runner/ca.crt --registration-token "<token>"
+![токен гит лаб раннер](https://github.com/user-attachments/assets/e6edb9e2-7b34-44e9-baf9-e0e95b7e3b87)
+![image](https://github.com/user-attachments/assets/54d62d2a-dabe-43a8-9799-82ae8467f5f9)
+
+# Pipeline
+
+В рамках проекта создаём файл `.gitlab-ci.yml`, который будет содержать инструкции для выполнения задач раннером. В репозиторий также добавим файлы `Dockerfile`, `calc.py` и `requirements.txt`. С помощью Trivy будет выполнено сканирование собранного образа, Semgrep просканирует всю директорию проекта, а Bandit проверит только Python-скрипт калькулятора.
+![image](https://github.com/user-attachments/assets/594591e5-ae3c-461d-b251-97c462ebdff6)
+
+Переменные для пайплайна были добавлены:
+![image](https://github.com/user-attachments/assets/bc33793c-5b51-4932-bf01-f9bca431316c)
+
+Запускаем пайплайн:
+![image](https://github.com/user-attachments/assets/78d7b050-8402-4802-8ba4-b03a794ea850)
+
 
 
 
